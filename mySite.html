@@ -6,7 +6,7 @@
 	<title>CS55.13 Week2 Assignment 3</title>
 	<!-- local css -->
 	<style>
-		ol {
+		ul {
 			margin: 0;
 			padding: 0;
 			list-style-type: none;
@@ -15,6 +15,7 @@
 		li {
 			display: inline-block;
       padding: 20px;
+      background-color: gray;
 		}
 	</style>
   <!-- load jquery to use for external json loading -->
@@ -29,9 +30,54 @@
   <script src="https://unpkg.com/@babel/standalone@7.22.10/babel.min.js"></script>
 </head>
 <body>
+<h1>List of Cool Games:</h1>
+  
+<!--Element to be filled using JSON data-->
+<div id='infoElement'></div>
 
-
-
+<script type="text/babel">
+  "use strict";
+  
+    function ProjectList(props) {
+    console.log(props);
+    // return some output for the component
+      return (
+        <div>
+          <ul>
+          {
+          props.list.map(
+            (item,index) => (
+            <li key={index}>
+              <h2>
+                {"#" + (index+1) + ": " + item.itemName}
+              </h2>
+              <a href={item.webLink}>
+                {"Link to " + item.itemName}
+              </a>
+            </li>
+            )
+          )
+          }
+          </ul>
+        </div>
+      );
+    }
+  
+      // use jQuery to load the JSON data from our server
+    $.getJSON(
+      'x',
+      function(jsonFromJquery) {
+        // after JSON loaded, call react createRoot() to identify root HTML element for app
+        // creating a root React element
+        const myRoot = ReactDOM.createRoot( document.getElementById('infoElement') );
+        // then call react render() to output JSX component into existing root element
+        myRoot.render(
+          <ProjectList list={jsonFromJquery} />
+        );
+      }
+    );
+</script>
+  
   
 </body>
 </html>

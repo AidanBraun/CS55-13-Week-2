@@ -1,18 +1,26 @@
 [
     {
-        "":"",
-        "":""
+        "itemName":"Deep Rock Galactic",
+        "webLink":"https://store.steampowered.com/app/548430/Deep_Rock_Galactic/"
     },
     {
-        "":"",
-        "":""
+        "itemName":"Dead Cells",
+        "webLink":"https://store.steampowered.com/app/588650/Dead_Cells/"
     },
     {
-        "":"",
-        "":""
+        "itemName":"Factorio",
+        "webLink":"https://store.steampowered.com/app/427520/Factorio/"
     },
     {
-        "":"",
-        "":""
+        "itemName":"Hollow Knight",
+        "webLink":"https://store.steampowered.com/app/367520/Hollow_Knight/"
+    },
+    {
+        "itemName":"Hades",
+        "webLink":"https://store.steampowered.com/app/1145360/Hades/"
+    },
+    {
+        "itemName":"Astroneer",
+        "webLink":"https://store.steampowered.com/app/361420/ASTRONEER/"
     }
 ]
